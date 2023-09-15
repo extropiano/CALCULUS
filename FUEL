@@ -1,0 +1,146 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+
+int main(){
+	
+char val,op;
+float CANTIDAD,DATO; /* DEFINICION DE VARIABLES DONDE "CANTIDAD" ES UTILIZADO PARA ALMACENAR LOS LITROS O EL MONTO Y "DATO" ES LA VARIABLE PARA ALMACENAR EL RESULTADO
+EN LA VERSION ANTERIOR HABÍA UTILIZADO MÁS VARIABLES INUTILES COMO PREMIUM = TIPO DE GASOLINA, MAGNA = TIPO DE GASOLINA Y ALMACENAR LA VARIABLE DE CADA COSTO
+PERO ENTRABA EN REDUNDANCIA Y GENERABA MÁS CÓDIGO Y CONSUMO DE MEMORIA, LA OTRA ERA LITROS Y MONTO, Y ENCONTRÉ QUE IGUAL ERA REDUNDANTE*/ 
+
+	//MAGNA = 22.71;
+    //PREMIUM = 24.29;
+
+
+
+printf ("\n\n\t\t\t Sistema costo Gasolina\n");
+printf ("\n\t Seleccione el tipo de gasolina \n");
+printf ("\n\t\t A Magna");
+printf ("\n\t\t B Premium \n\t\t");
+
+
+
+
+scanf ("%c",&val);
+
+
+
+switch (val) {
+	
+	case 'A':
+	
+	printf("\n\t\t Abriendo Opcion Gasolina Magna ... \n\t\t");
+	
+    printf ("\n\t\t El litro de Gasolina Magna al dia de hoy es de: $22.71\n\t\t");
+
+
+   //AÑADIR SECCIÓN DE OPCION SOBRE CALCULO DE CUANTO ES DE TANTOS LITROS Y LOS LITROS QUE ENTRAN POR COSTO
+    
+	printf ("\n\t\t ¿Desea calcular litros por monto o costo total de litros adquiridos? \n");
+    printf ("\n\t\t a) Litros por monto \n");
+    printf ("\n\t\t b) Costo total por litros  \n\t\t");
+    
+     scanf ("\t\t%c",&op);
+
+    
+    if (op=='a')
+	{
+	
+	        
+	         printf ("\n\t\t Ingrese el monto $\n\t\t");
+             scanf ("%f",&CANTIDAD);
+   
+              DATO=CANTIDAD/22.71;
+    
+             printf ("\n\n\t\t INFORMACION: \n");
+             printf("\n\t\t El monto es de $ %.2f y el total de litros seria de %.2f litros ",CANTIDAD,DATO);
+     
+             system("pause");
+	
+	     
+	     
+   }
+   else
+   
+   {
+   			printf ("\n\t\t Ingrese los litros \n\t\t");
+            scanf ("%f",&CANTIDAD);
+   
+              DATO=22.71*CANTIDAD;
+    
+             printf ("\n\n\t\t INFORMACION: \n");
+             printf("\n\t\t El costo total por  %.0f litros seria de $%.2f ",CANTIDAD,DATO);
+             
+     
+             system("pause");
+   }
+	       
+
+	
+	
+		       
+	
+	break;
+   
+   
+	
+	
+	
+	case 'B':
+	
+	printf("\n\t\t Abriendo Opcion Gasolina Premium ... \n\t\t");
+	
+	printf ("\n\t\t El litro de Gasolina Premium al dia de hoy es de: $ 24.29 \n\t\t");
+	
+	//AÑADIR SECCIÓN DE OPCION SOBRE CALCULO DE CUANTO ES DE TANTOS LITROS Y LOS LITROS QUE ENTRAN POR COSTO
+    
+	printf ("\n\t\t ¿Desea calcular litros por monto o costo total de litros adquiridos? \n");
+	printf ("\n\t\t a) Litros por monto \n");
+    printf ("\n\t\t b) Costo total por litros  \n\t\t");
+    
+    scanf ("\t\t%c",&op);
+    
+    if (op=='a')
+    
+	{
+	
+	        
+	         printf ("\n\t\t Ingrese el monto $\n\t\t");
+             scanf ("%f",&CANTIDAD);
+   
+              DATO=CANTIDAD/24.29;
+    
+             printf ("\n\n\t\t INFORMACION: \n");
+             printf("\n\t\t El monto es de $ %.2f y el total de litros seria de %.2f litros ",CANTIDAD,DATO);
+     
+             system("pause");
+	
+    }
+	     
+	else
+	
+	{
+			 printf ("\n\t\t Ingrese los litros \n\t\t");
+             scanf ("%f",&CANTIDAD);
+   
+              DATO=24.29*CANTIDAD;
+    
+             printf ("\n\n\t\t INFORMACION: \n");
+             printf("\n\t\t El costo total por  %.0f litros seria de $%.2f ",CANTIDAD,DATO);
+             
+     
+             system("pause");	
+	}
+	       
+
+
+	
+	break;
+	
+}
+
+return 0;
+
+}
