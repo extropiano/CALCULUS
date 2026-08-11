@@ -1,0 +1,13 @@
+include <iostream>
+using namespace std;
+
+int main()
+{
+    double a, b;
+
+    cout <<"Hola Mundo" <<endl;
+    cout << "Bievenido al mundo ";
+
+
+    return 0;
+}
