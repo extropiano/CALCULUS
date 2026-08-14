@@ -1,13 +1,48 @@
-include <iostream>
+
+#include <iostream>
 using namespace std;
 
 int main()
 {
-    double a, b;
+    double a, b, c, Δ ;
 
     cout <<"Hola Mundo" <<endl;
-    cout << "Bievenido al mundo ";
 
+    cout << "Ingrese un número: ";
+    cin >> a;
+
+    cout << "Ingrese otro número: ";
+    cin >> b;
+    
+    cout << "Ingrese otro número: ";
+    cin >> c;
+
+    
+
+    Δ = b*b - 4*(a*c);
+
+    c = 0;
+
+    c = a + b;
+
+    cout << "La suma es: " << c << endl;
+
+    cout << "Y el valor de delta es: " << Δ << endl; 
+       
+   
+    c = 0;
+    b = 0; 
+    a = 0;
+    Δ = 0;
+
+    cout << "Cálculo de área de un triángulo ";
+    cout << "Ingresa la altura: ";
+    cin >> a;
+
+    cout << "Ingresa la base: ";
+    cin >> b;
+    c = (a*b)/2;
+    cout << "El área del triángulo es: " << c << endl;
 
     return 0;
 }
